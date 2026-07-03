@@ -1,4 +1,4 @@
-package package2;
+package part2;
 import java.util.Scanner;
 
 public class Squared {
