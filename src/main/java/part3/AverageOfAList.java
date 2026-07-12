@@ -1,30 +1,32 @@
-
+package part3;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SumOfAList {
+public class AverageOfAList {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // implement here a program, that first reads user input
+        // adding them on a list until user gives -1.
+        // Then it computes the average of the numbers on the list
+        // and prints it.
         ArrayList<Integer> list = new ArrayList<>();
-        while (true) {
-            int input = Integer.valueOf(scanner.nextLine());
-            if (input == -1) {
+        while(true){
+
+            int num = Integer.valueOf(scanner.nextLine());
+            if(num == -1){
                 break;
             }
 
-            list.add(input);
+            list.add(num);
         }
-
-        System.out.println("");
-
-        // toteuta listan lukujen summan laskeminen tänne
         int sum = 0;
-        for(int num: list){
+        for(int num : list){
             sum = sum + num;
         }
 
-        System.out.println("Sum: " + sum);
+        System.out.println("Average: " + (double) sum/list.size());
+
     }
 }
