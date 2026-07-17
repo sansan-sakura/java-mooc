@@ -32,11 +32,17 @@ public class Counter {
     }
 
     public void increase(int increaseBy){
+        if(increaseBy < 0){
+            return;
+        }
         value = value + increaseBy;
     }
 
     public void decrease(int decreaseBy){
-        value = value + decreaseBy;
+        if(decreaseBy < 0){
+            return;
+        }
+        value = value - decreaseBy;
     }
 
 }
