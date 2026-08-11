@@ -56,7 +56,7 @@ public class LiquidContainers {
                 int total = second - amount;
                 if(total < 0){
                     second = 0;
-                    return;
+                    continue;
                 }
 
                 second = total;
